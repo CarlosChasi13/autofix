@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem
+            id="autofix.main_menu"
+            name="Autofix"/>
+        <menuitem 
+            id="autofix.vehicle_menu"
+            name="Vehicles"
+            parent="main_menu"
+            action="autofix.vehicle_action"
+            sequence="10"/>
+    </data>
+</odoo>

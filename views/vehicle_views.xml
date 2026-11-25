@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="autofix.vehicle_view_list" model="ir.ui.view">
+            <field name="name">autofix.vehicle.list</field>
+            <field name="model">autofix.vehicle</field>
+            <field name="arch" type="xml">
+            <list string="Vehicles">
+                <field name="plate"/>
+                <field name="brand"/>
+                <field name="year"/>
+                <field name="fuel_type"/>
+                <field name="state"/>
+            </list>
+            </field>
+        </record>
+        <record id="autofix.vehicle_view_form" model="ir.ui.view">
+            <field name="name">autofix.vehicle.form</field>
+            <field name="model">autofix.vehicle</field>
+            <field name="arch" type="xml">
+                <form string="Vehicle">
+                    <sheet>
+                        <group string="Vehicle Information">
+                            <field name="plate"/>
+                            <field name="brand"/>
+                            <field name="model"/>
+                            <field name="year"/>
+                            <field name="color"/>
+                        </group>
+                        <group>
+                            <field name="mileage"/>
+                            <field name="state" widget="boolean_toggle"/>
+                            <field name="fuel_type"/>
+                            <field name="vin"/>
+                            <field name="doors"/>
+                            <field name="notes"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+            
+        </record>
+        <record id="autofix.vehicle_action" model="ir.actions.act_window">
+            <field name="name">Vehicles</field>
+            <field name="res_model">autofix.vehicle</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+</odoo>

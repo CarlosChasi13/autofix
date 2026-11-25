@@ -1,0 +1,2 @@
+id,name,model_id,group_id/id,operation,domain
+access_autofix_vehicle_user,access.autofix.vehicle.user,autofix.vehicle,base.group_user,crud,
